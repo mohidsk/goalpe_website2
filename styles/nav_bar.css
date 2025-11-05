@@ -1,0 +1,133 @@
+@font-face {
+    font-family: "arupala_semi_bold";
+    src: url("/assets/fonts/arupala_grotesk_trail/arupala_grotesk_trial-semibold.ttf");
+}
+
+@font-face {
+    font-family: "arupala_bold_itl";
+    src: url("/assets/fonts/arupala_grotesk_trail/arupala_grotesk_trial_bold_italic.ttf");
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: clamp(48px, 12dvw ,72px);
+    background-color: #E4F23C;
+    box-sizing: border-box;
+    padding:0 32px;
+    position: relative;
+    z-index: 10;
+ 
+    & img { 
+        content: url("/assets/images/goal_pe_logo.png");
+        height: 24px;
+        width: 160px;
+    }
+
+    & ul {
+        display: flex;
+        flex: 1;
+        gap: 3.2%;
+        align-items: center;
+        justify-content: center;
+        font-family: "arupala_semi_bold";
+        color: #131312;
+        font-size: 16px;
+        list-style: none;
+    }
+
+    & button {
+        height: 42px;
+        width: 200px;
+        background-color: #0A0A0A;
+        color: #FFFFFF;
+        border-radius: 8px;
+        font-family: "arupala_bold_itl";
+        font-size: 16px;
+        border: none;
+    }
+
+    & .nav-menu {
+        display: none;
+        flex-direction: column;
+        height: 20px;
+        width: 20px;
+        align-items: center;
+        justify-content: flex-end; 
+        row-gap: 6px;
+
+        & .nav-menu-item1 {
+            height: 1.5px;
+            width: 14.5px;
+            background-color: #0A0A0A;
+            border-radius: 2px;
+        }
+
+        & .nav-menu-item2 {
+            height: 1.5px;
+            width: 12.5px;
+            background-color: #0A0A0A;
+            border-radius: 2px;
+        }
+
+        & .nav-menu-item3 {
+            height: 1.5px;
+            width: 16.5px;
+            background-color: #0A0A0A;
+            border-radius: 2px;
+        }
+    }
+
+    & .nav-side-bar {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;  
+            z-index: 10000;
+            background-color: #191919 ;
+            height: 100%;
+            width: 100%;
+            max-width: 390px;
+            margin: 0;
+        
+        & button {
+            display: flex;
+            height: max-content;
+            width: max-content;
+            outline: none;
+            color: #E4F23C;
+            background-color: transparent;
+        }
+        
+        & ul {
+            display: flex;
+            flex-direction: column;
+            font-family: "arupala_semi_bold";
+            color: #E4F23C;
+            font-size: 16px;
+            list-style: none;
+        }
+
+    }
+
+}
+
+@media (max-width: 1000px) {
+    nav{
+        & ul {
+            display: none;
+        }
+
+        & button {
+            display: none;
+        }
+
+        & .nav-menu {
+            display: flex;
+        }
+
+        
+    }
+}
